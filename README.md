@@ -4,8 +4,8 @@ A short web deck from Vatsal Mishra's OpenClaw event demo.
 
 It explains a real two-agent personal setup:
 
-- **Cloidberg** — personal concierge for briefings, Home OS, content drafts, research, reminders, files, and local workflows.
-- **Gilfoyle** — supervising agent that watches Cloidberg, restarts or alerts on failures, and keeps small failures from becoming silent failures.
+- **OpenClaw** — personal concierge for briefings, Home OS, content drafts, research, reminders, files, and local workflows.
+- **Hermes** — supervising agent that watches OpenClaw, restarts or alerts on failures, and keeps small failures from becoming silent failures.
 
 The deck is intentionally simple: one static HTML file, one LinkedIn QR image, no backend, no analytics, no build step.
 
