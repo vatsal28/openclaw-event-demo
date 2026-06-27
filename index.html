@@ -285,7 +285,7 @@
   .counter {
     position: fixed;
     bottom: 24px;
-    right: 24px;
+    right: 160px;
     z-index: 100;
     background: var(--ink);
     color: var(--cream);
@@ -316,6 +316,50 @@
   }
   .help.is-hidden { display: none; }
   @media (max-width: 720px) { .help { display: none; } }
+
+  .linkedin-qr-fixed {
+    position: fixed;
+    right: 24px;
+    bottom: 18px;
+    z-index: 150;
+    width: clamp(86px, 7.6vw, 112px);
+    color: var(--ink);
+    text-decoration: none;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    font-weight: 700;
+    line-height: 1.05;
+    transform: rotate(1deg);
+  }
+  .linkedin-qr-fixed img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    padding: 6px;
+    background: white;
+    border: 3px solid var(--ink);
+    border-radius: 12px;
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .linkedin-qr-fixed span {
+    display: inline-block;
+    margin-top: 0.42rem;
+    padding: 0.22rem 0.38rem;
+    border-radius: 999px;
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+  @media (max-width: 720px) {
+    .linkedin-qr-fixed {
+      width: 78px;
+      right: 14px;
+      bottom: 14px;
+    }
+    .linkedin-qr-fixed span { display: none; }
+  }
 
   /* Progress bar */
   .progress {
@@ -838,10 +882,10 @@
 
   .today-wrap {
     display: grid;
-    grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: clamp(1.2rem, 3vw, 3rem);
     align-items: stretch;
-    width: min(1120px, 100%);
+    width: min(980px, 100%);
     margin-top: 1.8rem;
   }
   .then-card,
@@ -858,7 +902,7 @@
   .now-card {
     background: var(--ink);
     color: var(--cream);
-    transform: rotate(1deg);
+    transform: rotate(0.7deg);
   }
   .today-label {
     display: inline-block;
@@ -937,7 +981,7 @@
 
   .connect-wrap {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) 300px;
+    grid-template-columns: minmax(0, 1fr);
     gap: 3rem;
     align-items: center;
   }
@@ -1168,11 +1212,6 @@
       <span class="tag">From demo to daily systems</span>
       <h2>Last time I showed the agent setup. Today it shipped public artifacts.</h2>
       <div class="today-wrap">
-        <div class="then-card">
-          <span class="today-label">Previous demo</span>
-          <h3>Two agents on a mini PC.</h3>
-          <p>OpenClaw as the front desk. Hermes as the operator. Telegram, GitHub, crons, files, browser, and deployment all wired into one working loop.</p>
-        </div>
         <div class="now-card">
           <span class="today-label">Built today</span>
           <h3>Two live products from the same loop.</h3>
@@ -1207,16 +1246,16 @@
             <div>X → <a href="https://x.com/cryptikcell" target="_blank" rel="noopener noreferrer">@cryptikcell</a></div>
           </div>
         </div>
-        <div class="qr-card">
-          <img src="linkedin-qr-actual.jpg" alt="QR code for Vatsal Mishra LinkedIn profile" />
-          <p>Scan for LinkedIn</p>
-        </div>
       </div>
     </div>
   </section>
 
 </div>
 
+<a class="linkedin-qr-fixed" href="https://linkedin.com/in/vatsal-mishra-54948111" target="_blank" rel="noopener noreferrer" aria-label="Open Vatsal Mishra LinkedIn profile">
+  <img src="linkedin-qr-actual.jpg" alt="QR code for Vatsal Mishra LinkedIn profile" />
+  <span>LinkedIn</span>
+</a>
 <div class="counter" id="counter">01 / 07</div>
 <div class="help">← → space · F fullscreen · Home</div>
 
